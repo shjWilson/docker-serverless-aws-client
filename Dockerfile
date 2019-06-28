@@ -21,6 +21,8 @@ RUN pip --no-cache-dir install \
 
 RUN curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash - && sudo apt-get install -y nodejs
 
+RUN npm install -g serverless
+
 RUN apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
