@@ -17,5 +17,5 @@ container.
 Following example show how to run dokcer image with mounting folders 
 
 ```
-docker run -v <PATH-TO-YOUR-CREDENTIALS-ON-HOST_MACHINE>/.aws:/root/.aws 6a91514f735e
+docker run -v <PATH-TO-YOUR-CREDENTIALS-ON-HOST_MACHINE>/.aws:/root/.aws -v <PATH-TO-YOUR-SERVERLESS-PROJECT>:/root/classify-lambda -v /var/run/docker.sock:/var/run/docker.sock b3219d2aa42b
 ```
