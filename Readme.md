@@ -57,11 +57,14 @@ To get shell for running container do:
    
 2. Get terminal access (shell) by running:
 
-   `docker exec -it <IMAGE-ID> /bin/bash`
+   `docker exec -it <CONTAINER-ID> /bin/bash`
 
    At this point you should see:
    
-   `root@<IMAGE-ID>:/notebooks# `
+   `root@<IMAGE-ID>:/notebooks#`
+   
+   Comment: Image ID is a static id for an image. When image "runs" it runs in
+   a container. So container id is the 'running machine' id 
    
 3. Go to home root directory, run:
    
