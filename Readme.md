@@ -17,5 +17,26 @@ container.
 Following example show how to run dokcer image with mounting folders 
 
 ```
-docker run -v <PATH-TO-YOUR-CREDENTIALS-ON-HOST_MACHINE>/.aws:/root/.aws -v <PATH-TO-YOUR-SERVERLESS-PROJECT>:/root/classify-lambda -v /var/run/docker.sock:/var/run/docker.sock b3219d2aa42b
+docker run -v <PATH-TO-YOUR-CREDENTIALS-ON-HOST_MACHINE>/.aws:/root/.aws -v <PATH-TO-YOUR-SERVERLESS-PROJECT>:/root/classify-lambda -v /var/run/docker.sock:/var/run/docker.sock <IMAGE ID>
 ```
+
+Where:
+
+1. To get IMAGE-ID run command 
+   
+   ```docker image ls```
+   
+   You should see line 
+   
+   ```serverless latest 0f5875eda9b2 6 days ago 2.55GB```
+   
+   - aws-serverless-client - is a tag name
+   - latest - is version name
+   - 0f5875eda9b2 - is the image id
+   
+If you don't have `aws-serverless-client` image build it.
+To build the image just check out this project, get in to directory and run
+follwoing command: 
+
+```docker build . -t aws-serverless-client```  
+   
