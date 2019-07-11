@@ -20,7 +20,9 @@ from the host system to the /root/.aws folder in docker container. That
 way you don't have to configure it every single time when you run docker
 container.
 
-Following example show how to run dokcer image with mounting folders 
+Following example show how to run docker image with mounting folders. In our case
+the <PATH-TO-YOUR-SERVERLESS-PROJECT> is the actual lambda serverless project which 
+you can check out from github: https://github.com/agilebeat-inc/serverless-lambda-infer-railroad
 
 ```
 docker run -v <PATH-TO-YOUR-CREDENTIALS-ON-HOST_MACHINE>/.aws:/root/.aws -v <PATH-TO-YOUR-SERVERLESS-PROJECT>:/root/classify-lambda <IMAGE ID>
