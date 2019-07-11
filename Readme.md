@@ -22,7 +22,7 @@ docker run -v <PATH-TO-YOUR-CREDENTIALS-ON-HOST_MACHINE>/.aws:/root/.aws -v <PAT
 
 Where:
 
-1. To get IMAGE-ID run command 
+1. You can get image ID by running following command: 
    
    ```docker image ls```
    
@@ -40,3 +40,31 @@ follwoing command:
 
 ```docker build . -t aws-serverless-client```  
    
+### Getting shell for running container
+
+To get shell for running container do:
+
+1. Get running container ID; run command `docker ps`
+   
+   `CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                NAMES`
+   `1e0246db6646        0f5875eda9b2        "jupyter notebook --…"   3 days ago          Up 3 days 6006/tcp, 8888/tcp gifted_meitner`
+   
+2. Get terminal access (shell) by running:
+
+   `docker exec -it <IMAGE-ID> /bin/bash`
+
+   At this point you should see:
+   
+   `root@<IMAGE-ID>:/notebooks# `
+   
+3. Go to home root directory, run:
+   
+   `cd`
+   
+4. Check if you see the serverless project folder
+
+   `ls`
+   
+   You should see folder:
+   
+   `classify-lambda`
