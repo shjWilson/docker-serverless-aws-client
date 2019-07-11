@@ -1,11 +1,17 @@
 # Environment to build and deploy lambda function 
 
-Use this project ot build docker image providing building/deployment
+Use this project to build docker image providing building/deployment
 environment for aws lambda function wrapping TensorFlow models.
 
 ## Getting Started
 
-Just run docker build to build an image.
+First build docker image using the Dockerfile. To build it you have to:
+
+1. Check out this project
+2. Get in to the project directory using `cd` command
+3. Run 
+
+`docker build . -t aws-serverless-client`
 
 ### Running docker
 
@@ -28,7 +34,7 @@ Where:
    
    You should see line 
    
-   ```serverless latest 0f5875eda9b2 6 days ago 2.55GB```
+   ```aws-serverless-client latest 0f5875eda9b2 6 days ago 2.55GB```
    
    - aws-serverless-client - is a tag name
    - latest - is version name
