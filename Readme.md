@@ -3,7 +3,7 @@
 Use this project to build docker image providing building/deployment
 environment for aws lambda function wrapping TensorFlow models.
 
-## Getting Started
+### Getting Started
 
 First build docker image using the Dockerfile. To build it you have to:
 
