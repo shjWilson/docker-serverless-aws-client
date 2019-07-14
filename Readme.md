@@ -11,7 +11,7 @@ First build docker image using the Dockerfile. To build it you have to:
 2. Get in to the project directory using `cd` command
 3. Run 
 
-`docker build . -t aws-serverless-client`
+`docker build . -t aws-serverless-client` .
 
 ### Running docker
 
@@ -25,7 +25,7 @@ the <PATH-TO-YOUR-SERVERLESS-PROJECT> is the actual lambda serverless project wh
 you can check out from github: https://github.com/agilebeat-inc/serverless-lambda-infer-railroad
 
 ```
-docker run -v <PATH-TO-YOUR-CREDENTIALS-ON-HOST_MACHINE>/.aws:/root/.aws -v <PATH-TO-YOUR-SERVERLESS-PROJECT>:/root/classify-lambda <IMAGE ID>
+docker run -v <PATH-TO-YOUR-CREDENTIALS-ON-HOST_MACHINE>/.aws:/root/.aws -v <PATH-TO-YOUR-SERVERLESS-PROJECT>:/root/classify-lambda -p 8888:8888 <IMAGE ID>
 ```
 
 Where:
