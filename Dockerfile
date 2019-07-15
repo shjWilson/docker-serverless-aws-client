@@ -12,8 +12,10 @@ RUN apt-get update && apt-get install -y \
     swig \
     libmecab-dev \
 	gfortran \
-    libav-tools \
+#    libav-tools \    --> On Ubuntu 18.04, install 'ffmpeg' instead of libav-tools
+    ffmpeg \        
     python3-setuptools \
+    python3-pip \
     sudo \
     curl \
     vim \
@@ -45,6 +47,7 @@ RUN pip --no-cache-dir install \
  	 ipykernel \
 	 numpy==1.14.5 \
          Pillow==6.0.0 \
+	 virtualenv \
         && \
     python -m ipykernel.kernelspec
 
